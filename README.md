@@ -1,6 +1,5 @@
 # Rock, Paper, Scissors, Lizard, Spock
-The first thing I will do once I push this commit, will be replacing this sentence with a link to the website so the beloved readers of this repository can play the game. </br>
-
+[Play the game with the very long title here!](https://besartelezi.github.io/rock-paper-scissors-lizard-spock/)
 ## Small step for a programmer, but a big step for a programmer that isn't fluent (YET) in Javascript
 The first step to this project, is adding the necessary HTML elements. This means:
 * Buttons for all options: *Rock, Paper, Scissors, Lizard, Spock*
@@ -11,6 +10,7 @@ It's never wrong to push yourselves, that's why, when I'm done with this project
   * Easy = Lets the player win every time
   * Medium = Randomizes the computer's cards so it's an honest game
   * Hard = The computer will win every time
+  * Besart = Play against a highly trained and refined AI that will play this game in the exact same manner as Besart himself would (he always picks rock)
 
 ##  When in doubt, Write it out:
 What I want the Javascript code to do is:
