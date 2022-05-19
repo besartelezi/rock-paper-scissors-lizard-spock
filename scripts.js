@@ -1,39 +1,83 @@
 (function () {
 
-    const GameChoices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+    //Array of the choices the computer can make
+    const ComputerChoices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
 
-    const RockButton = document.getElementById("Rock");
-    RockButton.onclick = () => {
-        console.log(GameChoices[0])
+    //the users choice, this changes according to what button the user presses
+    let UserChoice
+
+    //The buttons where the user can choose from
+    const UserPicksRock = document.getElementById("Rock")
+    const UserPicksPaper = document.getElementById("Paper")
+    const UserPicksScissors = document.getElementById("Paper")
+    const UserPicksLizard = document.getElementById("Lizard")
+    const UserPicksSpock = document.getElementById("Spock")
+
+    const ShowUserChoice = document.getElementById("Choice")
+    const Result = document.getElementById("Result")
+    const ShowComputerChoice = document.getElementById("ComputerChoice")
+
+
+    //The functions that will give the UserChoice variable a value corresponding to the chosen button (ex. if user presses rock button, the let Userchoice = rock)
+    UserPicksRock.addEventListener("click", RockHasBeenChosen)
+    function RockHasBeenChosen () {
+        ShowUserChoice.innerHTML = "You have chosen: Rock"
+        UserChoice = UserPicksRock.id
     }
 
-    const PaperButton = document.getElementById("Paper");
-    PaperButton.onclick = () => {
-        console.log(GameChoices[1])
+    UserPicksPaper.addEventListener("click", PaperHasBeenChosen)
+    function PaperHasBeenChosen () {
+        ShowUserChoice.innerHTML = "You have chosen: Paper"
+        UserChoice = UserPicksPaper.id
     }
 
-    const ScissorsButton = document.getElementById("Scissors");
-    ScissorsButton.onclick = () => {
-        console.log(GameChoices[2])
+    UserPicksScissors.addEventListener("click", ScissorsHasBeenChosen)
+    function ScissorsHasBeenChosen () {
+        ShowUserChoice.innerHTML = "You have chosen: Scissors"
+        UserChoice = UserPicksScissors.id
     }
 
-    const LizardButton = document.getElementById("Lizard");
-    LizardButton.onclick = () => {
-        console.log(GameChoices[3])
+    UserPicksLizard.addEventListener("click", LizardHasBeenChosen)
+    function LizardHasBeenChosen () {
+        ShowUserChoice.innerHTML = "You have chosen: Lizard"
+        UserChoice = UserPicksLizard.id
     }
-    const SpockButton = document.getElementById("Spock");
-    SpockButton.onclick = () => {
-        console.log(GameChoices[4])
+
+    UserPicksSpock.addEventListener("click", SpockHasBeenChosen)
+    function SpockHasBeenChosen () {
+        ShowUserChoice.innerHTML = "You have chosen: Spock"
+        UserChoice = UserPicksLizard.id
     }
 
     const StartTheGame = () => {
         //The computer picks a random choice from the array
-        let ComputerPicks = GameChoices[Math.floor(Math.random()*GameChoices.length)]
-        if (ComputerPicks === GameChoices[0]) {
+        let ComputerPicks = ComputerChoices[Math.floor(Math.random()*ComputerChoices.length)]
+        ShowComputerChoice.innerHTML = ComputerPicks
+
+        if (UserChoice === ComputerPicks) {
+            Result.innerHTML = "It's a draw! Try again nerdo."
+        }
+        if (UserChoice === "Rock" && ComputerPicks === "Scissors" ||
+            UserChoice === "Rock" && ComputerPicks === "Lizard" ||
+            UserChoice === "Paper" && ComputerPicks === "Rock" ||
+            UserChoice === "Paper" && ComputerPicks === "Spock" ||
+            UserChoice === "Scissors" && ComputerPicks === "Paper" ||
+            UserChoice === "Scissors" && ComputerPicks === "Lizard" ||
+            UserChoice === "Lizard" && ComputerPicks === "Paper" ||
+            UserChoice === "Lizard" && ComputerPicks === "Spock" ||
+            UserChoice === "Spock" && ComputerPicks === "Rock" ||
+            UserChoice === "Spock" && ComputerPicks === "Scissors") {
+            Result.innerHTML = "You won"
+        }
+        else {
+            Result.innerHTML = "GG EZiest game of my life didn't even break a single sweat"
         }
     }
 
     const StartButton = document.getElementById("StartGame");
     StartButton.addEventListener("click", StartTheGame)
+
+
+    // if () && function exists, does or work in if?
 
 })();
