@@ -9,7 +9,7 @@
     //The buttons where the user can choose from
     const UserPicksRock = document.getElementById("Rock")
     const UserPicksPaper = document.getElementById("Paper")
-    const UserPicksScissors = document.getElementById("Paper")
+    const UserPicksScissors = document.getElementById("Scissors")
     const UserPicksLizard = document.getElementById("Lizard")
     const UserPicksSpock = document.getElementById("Spock")
 
@@ -46,7 +46,7 @@
     UserPicksSpock.addEventListener("click", SpockHasBeenChosen)
     function SpockHasBeenChosen () {
         ShowUserChoice.innerHTML = "You have chosen: Spock"
-        UserChoice = UserPicksLizard.id
+        UserChoice = UserPicksSpock.id
     }
 
     const StartTheGame = () => {
@@ -67,10 +67,10 @@
             UserChoice === "Lizard" && ComputerPicks === "Spock" ||
             UserChoice === "Spock" && ComputerPicks === "Rock" ||
             UserChoice === "Spock" && ComputerPicks === "Scissors") {
-            Result.innerHTML = "You won"
+            Result.innerHTML = "Congratulations, you won"
         }
         else {
-            Result.innerHTML = "GG EZiest game of my life didn't even break a single sweat"
+            Result.innerHTML = "Damn you lost frfr"
         }
     }
 

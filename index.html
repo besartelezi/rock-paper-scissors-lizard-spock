@@ -6,19 +6,21 @@
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-<section class="GroupButtons">
-    <h1>Rock Papers Scissors Lizard Spock</h1>
-    <h2 id ="Choice"> You have chosen: ...</h2>
-    <h2 id ="ComputerChoice">The Computer has chosen: ...</h2>
-    <h2 id="Result"> Who will win?</h2>
 
-    <button class = "UserChoiceButton" id="Rock">Rock</button>
-    <button class = "UserChoiceButton" id="Paper">Paper</button>
-    <button class = "UserChoiceButton" id="Scissors">Scissors</button>
-    <button class = "UserChoiceButton" id="Lizard">Lizard</button>
-    <button class = "UserChoiceButton" id="Spock">Spock</button>
-    <button class = "StartandReset" id="StartGame">Computer's turn</button>
-    <button onClick="window.location.reload()" id="RestartGame">Restart game</button>
+    <section class ="GameScreen">
+        <h1>Rock Papers Scissors Lizard Spock</h1>
+        <h2 id ="Choice"> You have chosen: ...</h2>
+        <h2 id ="ComputerChoice">The Computer has chosen: ...</h2>
+        <h2 id ="Result"> Who will win?</h2>
+    </section>
+    <section class="GroupButtons">
+        <button class = "UserChoiceButton" id="Rock">Rock</button>
+        <button class = "UserChoiceButton" id="Paper">Paper</button>
+        <button class = "UserChoiceButton" id="Scissors">Scissors</button>
+        <button class = "UserChoiceButton" id="Lizard">Lizard</button>
+        <button class = "UserChoiceButton" id="Spock">Spock</button>
+        <button class = "StartandReset" id="StartGame">Computer's turn</button>
+        <button onClick="window.location.reload()" id="RestartGame" class ="StartandReset">Restart game</button>
 </section>
 <script src="scripts.js"></script>
 </body>
