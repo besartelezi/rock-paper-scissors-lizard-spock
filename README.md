@@ -54,3 +54,10 @@ They saved me a lot of time and energy and made the code look way simpler than i
 
 With Javascript out of the way, I will focus on  the styling for a little bit to make the game look more appealing.
 ## CSS: Crispy Smooth Styling
+I chose a very basic styling that I made as fast as possible to make it look visually more clear what the user has to do. I also changed the buttons for images that I think are quite funny and accurately depict Rock, Paper, Scissors, Lizard and Spock.
+## Yes IFs ANDs or ORs (but no buts)
+I had a blast creating this game. The lessons I learned from using the if's, and's, or's are something that I will never forget. These tools will make sure that I have to write WAY less code and achieve even better results that way. </br>
+
+Finding a way to use the ID's of the buttons as user input and add it to the let variable is something I'm extra proud of. There might've been a way easier way to achieve the result I wanted, but I'm glad I went for my way, and not the highway. </br>
+
+I cannot wait to create some more games using Javascript and improve this game whenever I have the chance. I hope you enjoyed playing my game and reading this README, because I sure had a lot of fun making the game and writing this README.

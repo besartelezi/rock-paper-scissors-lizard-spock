@@ -52,12 +52,12 @@
     const StartTheGame = () => {
         //The computer picks a random choice from the array
         let ComputerPicks = ComputerChoices[Math.floor(Math.random()*ComputerChoices.length)]
-        ShowComputerChoice.innerHTML = ComputerPicks
+        ShowComputerChoice.innerHTML = "The Computer has chosen: " +ComputerPicks
 
         if (UserChoice === ComputerPicks) {
-            Result.innerHTML = "It's a draw! Try again nerdo."
+            Result.innerHTML = "It's a draw! Try again."
         }
-        if (UserChoice === "Rock" && ComputerPicks === "Scissors" ||
+        else if (UserChoice === "Rock" && ComputerPicks === "Scissors" ||
             UserChoice === "Rock" && ComputerPicks === "Lizard" ||
             UserChoice === "Paper" && ComputerPicks === "Rock" ||
             UserChoice === "Paper" && ComputerPicks === "Spock" ||
@@ -67,17 +67,13 @@
             UserChoice === "Lizard" && ComputerPicks === "Spock" ||
             UserChoice === "Spock" && ComputerPicks === "Rock" ||
             UserChoice === "Spock" && ComputerPicks === "Scissors") {
-            Result.innerHTML = "Congratulations, you won"
+            Result.innerHTML = "Congratulations, you barely won."
         }
         else {
-            Result.innerHTML = "Damn you lost frfr"
+            Result.innerHTML = "You lose, that's what you get for challenging a hyper-intelligent AI!"
         }
     }
 
     const StartButton = document.getElementById("StartGame");
     StartButton.addEventListener("click", StartTheGame)
-
-
-    // if () && function exists, does or work in if?
-
 })();
